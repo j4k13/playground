@@ -20,11 +20,13 @@
 	foreach($theWhere as $index)
 	{
 		$revisedWhere[$iterator] = $index[1];
+		$iterator++;
 	}
-	var_dump($revisedWhere);
-	for($iterator = 0 ; $iterator < sizeOf($theWhere) ; $iterator++)
+	//var_dump($revisedWhere);
+	$finalWhere[] = 0;
+	for($iterator = 0 ; $iterator < sizeOf($revisedWhere) ; $iterator++)
 	{
-		//$line = rtrim($line[1],".");
+		$finalWhere[$iterator] = rtrim($revisedWhere[$iterator][0],".");
 	}
-	//var_dump($theWhere);
+	var_dump($finalWhere);
 ?>
